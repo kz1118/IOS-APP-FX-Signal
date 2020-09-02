@@ -24,7 +24,38 @@ class Colors {
     }
 }
     
+func setMonitorLabelText(l:UILabel,c:String){
+    var text:String = "N"
+    switch c {
+    case "Red":
+        text = "SELL"
+    case "Green":
+        text = "BUY"
+    default:
+        text = "N"
+    }
+    
+    l.text = text
+    l.font = UIFont.boldSystemFont(ofSize: 14)
+}
 
+func setBuyLabelTextColor(l:UILabel){
+    switch l.text {
+    case "Active":
+        l.textColor = UIColor.green
+    default:
+        l.textColor = UIColor.black
+    }
+}
+
+func setSellLabelTextColor(l:UILabel){
+    switch l.text {
+    case "Active":
+        l.textColor = UIColor.red
+    default:
+        l.textColor = UIColor.black
+    }
+}
 
 func setGradientColor(l:UIView,c:String){
     var colors=Colors(rt:K.GrayColor.topRed,gt:K.GrayColor.topGreen,bt:K.GrayColor.topBlue,rb:K.GrayColor.bottomRed,gb:K.GrayColor.bottomGreen,bb:K.GrayColor.bottomBlue)
@@ -42,17 +73,20 @@ func setGradientColor(l:UIView,c:String){
     l.backgroundColor = UIColor.clear
     let backgroundLayer = colors.gl
     backgroundLayer?.frame = l.bounds
-    print(l.frame)
-    print(l.bounds)
-//    print("")
+
     l.layer.insertSublayer(backgroundLayer!,at:0)
 }
 
-func setStaticFormat(l:[UILabel]){
+func setMonitorStaticFormat(l:[UIView]){
     let labels = l
     
     for i in labels{
         i.layer.masksToBounds = true
         i.layer.cornerRadius = (i.frame.height)/8
     }
+}
+
+func setCurrencySelectorButtonFormat(l:UIButton){
+    l.layer.masksToBounds = true
+    l.layer.cornerRadius = (l.frame.height)/8
 }

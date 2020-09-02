@@ -3,19 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FF74BCA7A9561308CF26970 /* Pods_FXSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7CB0EC0DB58EEFEBCB57D4 /* Pods_FXSignal.framework */; };
 		4226F14B24EB7F1100F5B587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226F14A24EB7F1100F5B587 /* AppDelegate.swift */; };
 		4226F14D24EB7F1100F5B587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226F14C24EB7F1100F5B587 /* SceneDelegate.swift */; };
 		4226F14F24EB7F1100F5B587 /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226F14E24EB7F1100F5B587 /* MonitorViewController.swift */; };
 		4226F15224EB7F1100F5B587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226F15024EB7F1100F5B587 /* Main.storyboard */; };
 		4226F15424EB7F1300F5B587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4226F15324EB7F1300F5B587 /* Assets.xcassets */; };
 		4226F15724EB7F1300F5B587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226F15524EB7F1300F5B587 /* LaunchScreen.storyboard */; };
+		423C755F24F60A9800483151 /* MonitorSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C755E24F60A9800483151 /* MonitorSetupController.swift */; };
 		4281AD3E24EDCDD100CC96B8 /* IndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281AD3D24EDCDD100CC96B8 /* IndicatorManager.swift */; };
 		4281AD4424EF734F00CC96B8 /* BeautyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281AD4024EF1D7300CC96B8 /* BeautyManager.swift */; };
 		4281AD4524EF735400CC96B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281AD4224EF44F400CC96B8 /* Constants.swift */; };
+		4281AD4824F0CBE900CC96B8 /* FXData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281AD4624F0C41A00CC96B8 /* FXData.swift */; };
+		42DD36B324F8B3EB00657B5E /* StrategyConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD36B224F8B3EB00657B5E /* StrategyConfigManager.swift */; };
+		42DD36B524FF4BEE00657B5E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD36B424FF4BEE00657B5E /* ProfileViewController.swift */; };
+		42DD36B924FF526A00657B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42DD36B824FF526A00657B5E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +33,17 @@
 		4226F15324EB7F1300F5B587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4226F15624EB7F1300F5B587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4226F15824EB7F1300F5B587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423C755E24F60A9800483151 /* MonitorSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorSetupController.swift; sourceTree = "<group>"; };
 		4281AD3D24EDCDD100CC96B8 /* IndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorManager.swift; sourceTree = "<group>"; };
 		4281AD4024EF1D7300CC96B8 /* BeautyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyManager.swift; sourceTree = "<group>"; };
 		4281AD4224EF44F400CC96B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4281AD4624F0C41A00CC96B8 /* FXData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXData.swift; sourceTree = "<group>"; };
+		42DD36B224F8B3EB00657B5E /* StrategyConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyConfigManager.swift; sourceTree = "<group>"; };
+		42DD36B424FF4BEE00657B5E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		42DD36B824FF526A00657B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F8ECFFEAE4E1BCAE9231E3A /* Pods-FXSignal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXSignal.release.xcconfig"; path = "Target Support Files/Pods-FXSignal/Pods-FXSignal.release.xcconfig"; sourceTree = "<group>"; };
+		8A7CB0EC0DB58EEFEBCB57D4 /* Pods_FXSignal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FXSignal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C1DC4349F6B0550E69C50C /* Pods-FXSignal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXSignal.debug.xcconfig"; path = "Target Support Files/Pods-FXSignal/Pods-FXSignal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF74BCA7A9561308CF26970 /* Pods_FXSignal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				4226F14924EB7F1100F5B587 /* FXSignal */,
 				4226F14824EB7F1100F5B587 /* Products */,
+				A38AC8AD1B4E44624756E6D5 /* Pods */,
+				E8C6AE82A15B3FDBA96B2232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +86,7 @@
 				4226F15024EB7F1100F5B587 /* Main.storyboard */,
 				4226F15324EB7F1300F5B587 /* Assets.xcassets */,
 				4226F15524EB7F1300F5B587 /* LaunchScreen.storyboard */,
+				42DD36B824FF526A00657B5E /* GoogleService-Info.plist */,
 				4226F15824EB7F1300F5B587 /* Info.plist */,
 			);
 			path = FXSignal;
@@ -77,7 +95,9 @@
 		4226F15E24EB881C00F5B587 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				423C755E24F60A9800483151 /* MonitorSetupController.swift */,
 				4226F14E24EB7F1100F5B587 /* MonitorViewController.swift */,
+				42DD36B424FF4BEE00657B5E /* ProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,10 +106,29 @@
 			isa = PBXGroup;
 			children = (
 				4281AD3D24EDCDD100CC96B8 /* IndicatorManager.swift */,
+				4281AD4624F0C41A00CC96B8 /* FXData.swift */,
 				4281AD4024EF1D7300CC96B8 /* BeautyManager.swift */,
 				4281AD4224EF44F400CC96B8 /* Constants.swift */,
+				42DD36B224F8B3EB00657B5E /* StrategyConfigManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A38AC8AD1B4E44624756E6D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6C1DC4349F6B0550E69C50C /* Pods-FXSignal.debug.xcconfig */,
+				7F8ECFFEAE4E1BCAE9231E3A /* Pods-FXSignal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8C6AE82A15B3FDBA96B2232 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A7CB0EC0DB58EEFEBCB57D4 /* Pods_FXSignal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4226F15B24EB7F1300F5B587 /* Build configuration list for PBXNativeTarget "FXSignal" */;
 			buildPhases = (
+				AAD7F1096CC47E96C0F66F38 /* [CP] Check Pods Manifest.lock */,
 				4226F14324EB7F1100F5B587 /* Sources */,
 				4226F14424EB7F1100F5B587 /* Frameworks */,
 				4226F14524EB7F1100F5B587 /* Resources */,
+				A3A63D61D2F1E28037668C08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,12 +192,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				4226F15724EB7F1300F5B587 /* LaunchScreen.storyboard in Resources */,
+				42DD36B924FF526A00657B5E /* GoogleService-Info.plist in Resources */,
 				4226F15424EB7F1300F5B587 /* Assets.xcassets in Resources */,
 				4226F15224EB7F1100F5B587 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3A63D61D2F1E28037668C08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXSignal/Pods-FXSignal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXSignal/Pods-FXSignal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FXSignal/Pods-FXSignal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD7F1096CC47E96C0F66F38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FXSignal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4226F14324EB7F1100F5B587 /* Sources */ = {
@@ -166,6 +250,10 @@
 				4226F14F24EB7F1100F5B587 /* MonitorViewController.swift in Sources */,
 				4281AD3E24EDCDD100CC96B8 /* IndicatorManager.swift in Sources */,
 				4281AD4424EF734F00CC96B8 /* BeautyManager.swift in Sources */,
+				4281AD4824F0CBE900CC96B8 /* FXData.swift in Sources */,
+				42DD36B324F8B3EB00657B5E /* StrategyConfigManager.swift in Sources */,
+				42DD36B524FF4BEE00657B5E /* ProfileViewController.swift in Sources */,
+				423C755F24F60A9800483151 /* MonitorSetupController.swift in Sources */,
 				4226F14B24EB7F1100F5B587 /* AppDelegate.swift in Sources */,
 				4226F14D24EB7F1100F5B587 /* SceneDelegate.swift in Sources */,
 				4281AD4524EF735400CC96B8 /* Constants.swift in Sources */,
@@ -310,6 +398,7 @@
 		};
 		4226F15C24EB7F1300F5B587 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C1DC4349F6B0550E69C50C /* Pods-FXSignal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +416,7 @@
 		};
 		4226F15D24EB7F1300F5B587 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8ECFFEAE4E1BCAE9231E3A /* Pods-FXSignal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

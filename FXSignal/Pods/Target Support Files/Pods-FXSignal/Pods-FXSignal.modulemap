@@ -1,0 +1,6 @@
+framework module Pods_FXSignal {
+  umbrella header "Pods-FXSignal-umbrella.h"
+
+  export *
+  module * { export * }
+}
