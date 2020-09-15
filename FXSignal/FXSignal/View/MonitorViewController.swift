@@ -102,6 +102,7 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
         indicatorM.delegate = self
         
         setMonitorStaticFormat(l: [mBlankLabel,m15mLabel,m30mLabel,m1hLabel,m4hLabel,mDLabel,mMLabel,mBLabel,mRLabel,mSLabel,mALabel])
@@ -221,5 +222,7 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
             blinkStatus = false
         }
     }
+    
+    
 }
 

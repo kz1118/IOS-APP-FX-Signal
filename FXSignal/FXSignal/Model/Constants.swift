@@ -13,6 +13,8 @@ struct K {
     
     static let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Strategies.plist")
     
+    static let defaults = UserDefaults.standard
+    
     static let CurrencyPairs = ["AUDUSD","EURUSD","GBPUSD","USDJPY"]
     static let SupportedIndicators = ["MACD: 15m", "MACD: 30m","MACD: 1h","MACD: 4h","MACD: D",
         "BBand: 15m", "BBand: 30m","BBand: 1h","BBand: 4h","BBand: D",
@@ -60,4 +62,11 @@ struct K {
     "ADX: 15m":"adx15m", "ADX: 30m":"adx30m","ADX: 1h":"adx1h","ADX: 4h":"adx4h","ADX: D":"adxD"]
     
     static let numberOfSelectedIndicator:Int = 5
+    
+    static let strategyCellIdentifier:String = "cellIdentifier"
+    
+    static let follow3:String = "MelodyX.FXSignal.PremiumSubscription"
+    static let follow6:String = "MelodyX.FXSignal.PremiumSubscription2"
+    static let followAll:String = "MelodyX.FXSignal.PremiumSubscription3"
+    
 }

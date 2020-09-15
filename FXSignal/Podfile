@@ -7,8 +7,10 @@ target 'FXSignal' do
   # Pods for FXSignal
   
   pod 'DropDown'
-#  pod 'Firebase/Auth'
-#  pod 'Firebase/Firestore'
-#  pod 'FIrebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
+  pod 'Alamofire'
   
 end
