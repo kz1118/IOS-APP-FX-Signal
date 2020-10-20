@@ -27,12 +27,15 @@ class StrategyViewController: UIViewController {
         strats.loadSubscribedStrats()
         strats.subscribeAndListen()
         
-        print(StrategySubscriptionManager.upperBound)
-
-
+     //   print(StrategySubscriptionManager.upperBound)
     }
     
-
+    @IBAction func StrategyGuidanceButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "STRATEGY INSTRUCTION", message: K.strategySelectMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -67,6 +70,7 @@ extension StrategyViewController:UITableViewDataSource{
         }
         
         cell.textLabel?.font = UIFont.systemFont(ofSize: 14)
+        cell.textLabel?.textColor = UIColor.black
         return cell
     }
 }
@@ -74,7 +78,7 @@ extension StrategyViewController:UITableViewDataSource{
 extension StrategyViewController:UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+    //    print(indexPath.row)
         currentSelection = indexPath.row
         self.performSegue(withIdentifier: "goToSubscription", sender: self)
         

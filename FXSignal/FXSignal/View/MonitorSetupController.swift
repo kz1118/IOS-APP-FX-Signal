@@ -149,6 +149,8 @@ class MonitorSetupController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
+    
     @IBAction func textFieldtouchOutside(_ sender: UITextField) {
         sender.endEditing(true)
     }
@@ -166,7 +168,13 @@ class MonitorSetupController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func ExplainationButtonPressed(_ sender: Any) {
 
+        let alert = UIAlertController(title: "CONFIGURATION INSTRUCTION", message: K.strategyConfigMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

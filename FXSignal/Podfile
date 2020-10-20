@@ -12,5 +12,6 @@ target 'FXSignal' do
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
   pod 'Alamofire'
+  pod 'IQKeyboardManagerSwift'
   
 end

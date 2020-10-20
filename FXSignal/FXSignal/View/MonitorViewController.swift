@@ -103,6 +103,10 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
         // Do any additional setup after loading the view.
         
         
+    //    print("EEEEE")
+     //   sleep(5)
+        
+        
         indicatorM.delegate = self
         
         setMonitorStaticFormat(l: [mBlankLabel,m15mLabel,m30mLabel,m1hLabel,m4hLabel,mDLabel,mMLabel,mBLabel,mRLabel,mSLabel,mALabel])
@@ -111,10 +115,14 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
         setMonitorStaticFormat(l: [buyCustomizeButton,sellCustomizeButton])
         setCurrencySelectorButtonFormat(l:SelectorButton)
         
+      //  print("FFFFF")
+      //  sleep(5)
         indicatorM.loadDefault()
-        
+      //  print("GGGGG")
+      //  sleep(5)
         indicatorM.performRequest()
-        
+     //   print("HHHHH")
+      //  sleep(5)
         let timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(labelChangeColor), userInfo: nil, repeats: true)
         
 
@@ -130,10 +138,13 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
         
         let vs:[UIView] = [macd15mView,macd30mView,macd1hView,macd4hView,macdDView,bb15mView,bb30mView,bb1hView,bb4hView,bbDView,rsi15mView,rsi30mView,rsi1hView,rsi4hView,rsiDView,stoch15mView,stoch30mView,stoch1hView,stoch4hView,stochDView,adx15mView,adx30mView,adx1hView,adx4hView,adxDView]
         
-        for i in 0...(vs.count-1) {
-            setGradientColor(l: vs[i], c: indicators[i])
+        for i in 0...(ls.count-1){
+            setBackgroundClor(l: ls[i], c: indicators[i])
         }
-        
+
+//        for i in 0...(vs.count-1) {
+ //           setGradientColor(l: vs[i], c: indicators[i])
+ //       }
         for i in 0...(ls.count-1) {
             setMonitorLabelText(l: ls[i], c: indicators[i])
         }
@@ -178,7 +189,13 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
         self.performSegue(withIdentifier: "goToSellSetup", sender: self)
     }
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+    @IBAction func MonitorInstructionButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "MONITOR INSTRUCTION", message: K.monitorViewMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let MSController = segue.destination as! MonitorSetupController
         MSController.currency = indicatorM.im.currency
         MSController.MVController = self
@@ -201,7 +218,7 @@ class MonitorViewController: UIViewController, IndicatorManagerDelegate {
     func reloadData()   {
         indicatorM.delegate = self
         indicatorM.loadDefault()
-        print(indicatorM.im.currency)
+    //    print(indicatorM.im.currency)
         indicatorM.performRequest()
     }
     

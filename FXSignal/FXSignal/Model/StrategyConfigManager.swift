@@ -120,7 +120,7 @@ class SConfigManager{
             print("Error happened")
         }
         
-        print(strategies)
+     //   print(strategies)
     }
     
     func loadDefault(){

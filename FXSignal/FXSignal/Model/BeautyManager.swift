@@ -57,6 +57,21 @@ func setSellLabelTextColor(l:UILabel){
     }
 }
 
+func setBackgroundClor(l:UILabel,c:String){
+
+    switch c {
+    case "Red":
+        l.backgroundColor = UIColor.red
+    case "Green":
+        l.backgroundColor = UIColor.green
+    case "Gray":
+        l.backgroundColor = UIColor.gray
+    default:
+        l.backgroundColor = UIColor.gray
+    }
+}
+
+
 func setGradientColor(l:UIView,c:String){
     var colors=Colors(rt:K.GrayColor.topRed,gt:K.GrayColor.topGreen,bt:K.GrayColor.topBlue,rb:K.GrayColor.bottomRed,gb:K.GrayColor.bottomGreen,bb:K.GrayColor.bottomBlue)
     switch c {
@@ -69,13 +84,16 @@ func setGradientColor(l:UIView,c:String){
     default:
         colors=Colors(rt:K.GrayColor.topRed,gt:K.GrayColor.topGreen,bt:K.GrayColor.topBlue,rb:K.GrayColor.bottomRed,gb:K.GrayColor.bottomGreen,bb:K.GrayColor.bottomBlue)
     }
-    
+
     l.backgroundColor = UIColor.clear
     let backgroundLayer = colors.gl
     backgroundLayer?.frame = l.bounds
 
     l.layer.insertSublayer(backgroundLayer!,at:0)
+    
+    
 }
+
 
 func setMonitorStaticFormat(l:[UIView]){
     let labels = l

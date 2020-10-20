@@ -9,14 +9,20 @@
 import UIKit
 import UserNotifications
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
     let gcmMessageIDKey = "gcm.message_id"
+    var window:UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        sleep(1)
+        
+        IQKeyboardManager.shared.enable = true
         
         FirebaseApp.configure()
         
@@ -44,16 +50,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
             print("Error fetching remote instance ID: \(error)")
           } else if let result = result {
             print("Remote instance ID token: \(result.token)")
+            if var ss = K.defaults.array(forKey: "FirebaseRegistrationToken") as? [String]{
+                if !ss.contains(result.token ){
+                    ss.append(result.token)
+                    K.defaults.set(ss, forKey: "FirebaseRegistrationToken")
+                }
+            }else{
+                K.defaults.set([result.token], forKey: "FirebaseRegistrationToken")
+            }
          //   self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
           }
         }
-        
+       // print("IIIII-----")
+       // sleep(5)
         Messaging.messaging().subscribe(toTopic: "test") {Error in
             print("subscribed to test topic")
+         //   sleep(5)
         }
-        
+       // sleep(2)
+       // print("BBBBB---")
         StrategySubscriptionManager.subscriptionValidation()
-
+       // print("AAAAAA---------")
+       // sleep(2)
         return true
     }
 
