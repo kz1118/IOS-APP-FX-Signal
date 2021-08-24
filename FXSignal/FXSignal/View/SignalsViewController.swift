@@ -59,7 +59,7 @@ extension SignalsViewController:UITableViewDataSource{
                 cell.statusCell.text = "LIVE!"
             }else{
                 cell.statusCell.textColor = UIColor.white
-                cell.statusCell.text = "Expired"
+                cell.statusCell.text = "Closed"
             }
             if(StrategySubscriptionManager.upperBound==1 && cell.statusCell.text == "LIVE!"){
                 cell.bodyCell.text = "Open: SIGNAL LOCKED"

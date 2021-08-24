@@ -12,7 +12,11 @@ import Alamofire
 import Firebase
 
 
-class SubscriptionViewController: UIViewController,SKPaymentTransactionObserver {
+class SubscriptionViewController: UIViewController,SKPaymentTransactionObserver,SKProductsRequestDelegate {
+
+    var productID:NSSet = NSSet(object: "string")
+    var productsRequest:SKProductsRequest = SKProductsRequest()
+    var products = [String:SKProduct]()
     
     @IBOutlet weak var logInView: UIView!
     @IBOutlet weak var subscriptionView: UIView!
@@ -49,6 +53,8 @@ class SubscriptionViewController: UIViewController,SKPaymentTransactionObserver 
         SKPaymentQueue.default().add(self)
         
         ref = Database.database().reference()
+        
+        requestProductsWithProductIdentifiers()
         
         hideLoginInformation()
         hideView()
@@ -120,6 +126,26 @@ class SubscriptionViewController: UIViewController,SKPaymentTransactionObserver 
         }
     }
     
+    func requestProductsWithProductIdentifiers(){
+        
+        let productIdentifiers:NSSet = NSSet(objects: "MelodyX.FXSignal.PremiumSubscription3")
+        productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
+        productsRequest.delegate = self
+        productsRequest.start()
+        
+        
+    }
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        if let productsFromResponse = response.products as? [SKProduct] {
+            for product in productsFromResponse {
+                products[product.productIdentifier] = product
+                print("AAA---")
+                print(product.productIdentifier)
+            }
+        }
+    }
+    
     
     @IBAction func logInButtonPressed(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -183,15 +209,30 @@ class SubscriptionViewController: UIViewController,SKPaymentTransactionObserver 
     }
     
     
+//    @IBAction func makeSubFor3Pressed(_ sender: Any) {
+//        if !SKPaymentQueue.canMakePayments() {
+//            return
+//        }
+//
+//        let paymentRequest = SKMutablePayment()
+//        //SKPaymentQueue.default().add(self)
+//        paymentRequest.productIdentifier = K.followAll
+//        SKPaymentQueue.default().add(paymentRequest)
+//    }
+    
     @IBAction func makeSubFor3Pressed(_ sender: Any) {
         if !SKPaymentQueue.canMakePayments() {
             return
         }
 
-        let paymentRequest = SKMutablePayment()
-        //SKPaymentQueue.default().add(self)
-        paymentRequest.productIdentifier = K.followAll
-        SKPaymentQueue.default().add(paymentRequest)
+        var payment = SKPayment(product: products[K.followAll]!)
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().add(payment)
+        
+//        let paymentRequest = SKMutablePayment()
+//        //SKPaymentQueue.default().add(self)
+//        paymentRequest.productIdentifier = K.followAll
+//        SKPaymentQueue.default().add(paymentRequest)
     }
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
